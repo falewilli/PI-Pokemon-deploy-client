@@ -82,6 +82,8 @@ function validate(input) {
         errors.weight = '<- Integer numbers only'
     }
 
+    const validURL = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|svg)/gi;
+
     if(input.image.length > 0 && !validURL.test(input.image)) {
         errors.image = '<- Enter a valid URL'
     }
@@ -94,8 +96,6 @@ function validate(input) {
     // }
     return errors;
 }
-
-const validURL = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|svg)/gi;
 
 export default function PokemonCreate(){
     const dispatch = useDispatch();
