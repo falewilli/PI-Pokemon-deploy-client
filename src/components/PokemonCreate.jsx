@@ -21,6 +21,11 @@ function validate(input) {
     //     errors.name = '<- Only letters and (-)'
     // }
 
+    const validName = /^[A-Za-z-]*$/;
+
+    if(input.name.length > 0 && !validName.test(input.name)) {
+        errors.name = '<- Only letters and (-)'
+    }
 
     if (input.hp < 0) {
         errors.hp = '<- Positive numbers only'
