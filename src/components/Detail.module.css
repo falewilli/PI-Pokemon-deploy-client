@@ -52,7 +52,9 @@
 
 .stat {
     width: 270px;
+    height: 24px;
     display: flex;
+    align-items: center;
 }
 
 .stat span {
@@ -74,9 +76,9 @@
     appearance: none;
     width: 150px;
     height: 24px;
-    /* background-color: #eee;
+    background-color: #eee;
     border-radius: 0 12px 12px 0; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 progress[value]::-webkit-progress-bar {
