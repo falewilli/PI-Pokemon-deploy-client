@@ -16,7 +16,10 @@
 .card .image {
     margin: 0;
     width: 700px;
-    filter: drop-shadow(0 0 40px #fff);
+    /* -webkit-filter: drop-shadow(0 0 40px #fff);
+    filter: drop-shadow(0 0 40px #fff); */
+    -webkit-filter: drop-shadow(0 0 40px rgba(255,255,255,1));
+    filter: drop-shadow(0 0 40px rgba(255,255,255,1));
 }
 
 .card h3 {
@@ -66,12 +69,14 @@
 }
 
 .stat progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     width: 150px;
     height: 24px;
-    background-color: #eee;
+    /* background-color: #eee;
     border-radius: 0 12px 12px 0; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; */
 }
 
 progress[value]::-webkit-progress-bar {
@@ -82,7 +87,7 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
     background-image:
-         -webkit-linear-gradient(-45deg, 
+         -webkit-linear-gradient(135deg, 
                                  transparent 33%, rgba(0, 0, 0, .1) 33%, 
                                  rgba(0,0, 0, .1) 66%, transparent 66%),
          -webkit-linear-gradient(top, 
@@ -92,9 +97,31 @@ progress[value]::-webkit-progress-value {
   
       border-radius: 0 12px 12px 0; 
       background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+progress[value]::-moz-progress-bar { 
+    background-image:
+      -moz-linear-gradient(
+        135deg,
+        transparent 33%, 
+        rgba(0, 0, 0, 0.1) 33%, 
+        rgba(0, 0, 0, 0.1) 66%, 
+        transparent 66% 
+      ),
+      -moz-linear-gradient(
+        top, 
+        rgba(255, 255, 255, 0.25), 
+        rgba(0, 0, 0, 0.25)
+      ),
+      -moz-linear-gradient(
+        left, 
+        #09c, 
+        #f44
+      );
+  
+    border-radius: 0 12px 12px 0;
+    background-size: 35px 20px, 100% 100%, 100% 100%; 
   }
-
-
 
 .back {
     margin: 20px 0;

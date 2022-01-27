@@ -30,11 +30,17 @@
 }
 
 .card .image img {
-    filter: drop-shadow(0 0 30px #fff);
+    /* -webkit-filter: drop-shadow(0 0 30px #fff);
+    filter: drop-shadow(0 0 30px #fff); */
+    -webkit-filter: drop-shadow(0 0 30px rgba(255,255,255,1));
+    filter: drop-shadow(0 0 30px rgba(255,255,255,1));
 }
 
 .card .image:hover {
-    filter: drop-shadow(0 0 10px #fff);
+    /* -webkit-filter: drop-shadow(0 0 10px #fff);
+    filter: drop-shadow(0 0 10px #fff); */
+    -webkit-filter: drop-shadow(0 0 10px rgba(255,255,255,1));
+    filter: drop-shadow(0 0 10px rgba(255,255,255,1));
     /* background: #fff; */
 }
 
