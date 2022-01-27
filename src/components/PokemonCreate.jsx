@@ -17,9 +17,9 @@ function validate(input) {
     if (!input.name) {
         errors.name = '<- Name is required'
     }
-    if(!/^[A-Za-z-]*(?<!\.)$/.test(input.name)) {
-        errors.name = '<- Only letters and (-)'
-    }
+    // if(!/^[A-Za-z-]*(?<!\.)$/.test(input.name)) {
+    //     errors.name = '<- Only letters and (-)'
+    // }
 
 
     if (input.hp < 0) {
@@ -82,9 +82,9 @@ function validate(input) {
         errors.weight = '<- Integer numbers only'
     }
 
-    if(input.image.length > 0 && !validURL.test(input.image)) {
-        errors.image = '<- Enter a valid URL'
-    }
+    // if(input.image.length > 0 && !validURL.test(input.image)) {
+    //     errors.image = '<- Enter a valid URL'
+    // }
 
     // if (!input.type.length) {
     //     errors.type = '<- Type is required'
@@ -95,7 +95,7 @@ function validate(input) {
     return errors;
 }
 
-const validURL = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|svg)/gi;
+// const validURL = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|svg)/gi;
 
 export default function PokemonCreate(){
     const dispatch = useDispatch();
